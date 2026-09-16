@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      :root {
+        --brown: #066621;
+        --brown-dark: #000906;
+        --pink: #f4f1eb;
+        --pink-2: #efd0cc;
+        --cream: #fff8f7;
+        --text: #332929;
+        --muted: #6f5c5a;
+        --yellow: #e5ba69;
+        --max: 1120px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:" Cormorant Garamond", serif;;
+        color: var(--text);
+        background: var(--pink);
+        overflow-x: hidden;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: min(100% - 10vw, var(--max));
+        margin: auto;
+      }
+      .breadcrumb {
+        margin-top: 13px;
+        color: #e8e5dc;
+        font-size: 14px;
+        align-items: center;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+ /* ================= HEADER ================= */
+      .site-header {
+        background: var(--brown);
+        min-height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .brand {
+        color: #fff9f6;
+        text-align: center;
+        letter-spacing: 0.18em;
+      }
+      .brand-mark {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
+        letter-spacing: 0.16em;
+        margin-bottom: 3px;
+      }
+      .brand h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 34px;
+        line-height: 0.9;
+        font-weight: 600;
+      }
+      .brand small {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.32em;
+        margin-top: 9px;
+      }
+      .social {
+        position: absolute;
+        right: 28px;
+        bottom: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social a {
+        width: 22px;
+        height: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 10px;
+        transition: 0.25s;
+      }
+      .social a:hover {
+        background: #fff;
+        color: var(--brown);
+        transform: translateY(-2px);
+      }
+
+   /* ================= HERO ABOUT ================= */
+      .about {
+        background: var(--pink);
+        padding: 80px 0 100px;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 78px;
+        align-items: center;
+      }
+      .about-image-wrap {
+        position: relative;
+      }
+      .about-image {
+        width: min(100%, 450px);
+        aspect-ratio: 1/1.15;
+        object-fit: cover;
+        margin: auto;
+        border-radius: 0 0;
+      }
+      .about-shape {
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        border: 1px solid rgba(174, 129, 119, 0.35);
+        top: -28px;
+        left: -24px;
+        z-index: -1;
+      }
+      .section-kicker {
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--brown-dark);
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+      .about-copy h2,
+      .content-block h2,
+      .services h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        line-height: 0.95;
+        font-size: clamp(42px, 5.2vw, 76px);
+        margin-bottom: 22px;
+      }
+      .about-copy h2 em,
+      .content-block h2 em {
+        color: var(--brown);
+        font-style: normal;
+      }
+      .about-copy p {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.85;
+        max-width: 500px;
+        margin-bottom: 16px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 25px;
+        background: var(--brown);
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-top: 12px;
+        transition: 0.25s;
+      }
+      .btn:hover {
+        background: var(--brown-dark);
+        transform: translateY(-2px);
+      }
+
+/* ================= WAVE SECTION ================= */
+      .wave-section {
+        position: relative;
+        background: var(--pink-2);
+        padding: 110px 0 105px;
+        overflow: hidden;
+      }
+      
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        gap: 90px;
+        align-items: center;
+      }
+      .content-block h2 {
+        font-size: clamp(40px, 4.7vw, 67px);
+        max-width: 480px;
+      }
+      .content-block p {
+        color: var(--muted);
+        max-width: 480px;
+        font-size: 12px;
+        line-height: 1.8;
+      }
+      .feature-list {
+        list-style: none;
+        margin: 25px 0 10px;
+      }
+      .feature-list li {
+        position: relative;
+        padding-left: 18px;
+        margin: 9px 0;
+        color: var(--text);
+        font-size: 11px;
+      }
+      .feature-list li::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        color: var(--brown-dark);
+      }
+      .phone {
+        width: min(290px, 80%);
+        justify-self: center;
+        filter: drop-shadow(0 18px 22px rgba(90, 55, 45, 0.22));
+        transform: rotate(4deg);
+      }
+      .sparkle {
+        position: absolute;
+        color: #fff8f3;
+        font-size: 28px;
+        opacity: 0.9;
+      }
+      .s1 {
+        left: 54%;
+        top: 38%;
+      }
+      .s2 {
+        left: 58%;
+        bottom: 18%;
+      }
+      .s3 {
+        right: 19%;
+        top: 18%;
+      }
+
+      /* ================= SERVICES ================= */
+      .services {
+        background: var(--pink);
+        padding: 95px 0 100px;
+      }
+      .services-title {
+        text-align: center;
+        margin-bottom: 52px;
+      }
+      .services-title h2 {
+        display: inline-block;
+        font-size: clamp(38px, 4vw, 58px);
+        position: relative;
+      }
+      .services-title h2::after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: -8px;
+        height: 11px;
+        background: #fff8f8;
+        z-index: 0;
+      }
+      .services-title h2 span {
+        position: relative;
+        z-index: 1;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 70px;
+        align-items: center;
+      }
+      .testimonial h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(28px, 3vw, 45px);
+        line-height: 1;
+        margin-bottom: 22px;
+      }
+      .stars {
+        color: var(--yellow);
+        letter-spacing: 0.25em;
+        margin-bottom: 16px;
+        font-size: 12px;
+      }
+      .testimonial p {
+        max-width: 530px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.8;
+        font-style: italic;
+      }
+      .testimonial strong {
+        display: block;
+        margin-top: 17px;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+      }
+      .service-menu {
+        border: 1px solid rgba(174, 129, 119, 0.2);
+        background: rgba(255, 255, 255, 0.18);
+        padding: 18px 22px;
+      }
+      .service-item {
+        padding: 14px 5px;
+        border-bottom: 1px solid rgba(174, 129, 119, 0.2);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+      }
+      .service-item:last-child {
+        border-bottom: 0;
+      }
+      .service-item b {
+        font-weight: 500;
+      }
+      .highlight {
+        background: var(--yellow);
+        padding: 5px 8px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .logo-icon {
+        width: 70px;
+        height: 70px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--black);
+        color: white;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 25px;
+      }
+
+      .logo small {
+        display: block;
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-top: 1px;
+      }
+      /* ================= LOWER IMAGE/TEXT ================= */
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 430px;
+      }
+      .split-image {
+        overflow: hidden;
+      }
+      .split-image img {
+        height: 50;
+        object-fit: cover;
+      }
+      .split-copy {
+        background: #dcb8b4;
+        padding: 70px clamp(35px, 6vw, 90px);
+        display: flex;
+        align-items: center;
+      }
+      .split-copy h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(40px, 4.4vw, 62px);
+        line-height: 0.95;
+        margin-bottom: 18px;
+      }
+      .split-copy p {
+        color: #644e4a;
+        font-size: 12px;
+        line-height: 1.8;
+        max-width: 440px;
+      }
+ /* =========================================
+   FOOTER
+========================================= */
+      footer {
+        padding: 70px 8vw 25px;
+        background: #066621;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 70px;
+      }
+
+      .footer-top p {
+        font-family: var(--serif);
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        border-top: 1px solid #c1bdb5;
+        color: #777;
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      /* =========================
+   FOOTER DESIGN
+========================= */
+
+      .site-footer {
+        width: 100%;
+        background: #066621;
+        color: #fff;
+        padding: 80px 6% 0;
+      }
+
+      /* Main Footer */
+
+      .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns:
+          2fr
+          1fr
+          1fr
+          1.3fr;
+
+        gap: 70px;
+
+        padding-bottom: 65px;
+      }
+
+      /* Brand */
+
+      .footer-brand h2 {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin: 0 0 20px;
+      }
+
+      .footer-brand p {
+        max-width: 330px;
+
+        color: #aaa;
+
+        font-size: 14px;
+        line-height: 1.8;
+
+        margin: 0;
+      }
+
+      /* Footer Columns */
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-column h4 {
+        font-size: 15px;
+        font-weight: 600;
+
+        margin: 0 0 25px;
+
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .footer-column a {
+        position: relative;
+
+        display: inline-block;
+
+        color: #aaa;
+        text-decoration: none;
+
+        font-size: 14px;
+
+        margin-bottom: 13px;
+
+        transition: color 0.3s ease;
+      }
+
+      .footer-column a::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: -3px;
+
+        width: 0;
+        height: 1px;
+
+        background: #fff;
+
+        transition: width 0.3s ease;
+      }
+
+      .footer-column a:hover {
+        color: #fff;
+      }
+
+      .footer-column a:hover::after {
+        width: 100%;
+      }
+
+      /* Contact */
+
+      .footer-contact p {
+        color: #aaa;
+
+        font-size: 14px;
+        line-height: 1.6;
+
+        margin: 0 0 13px;
+      }
+
+      /* =========================
+   FOOTER BOTTOM
+========================= */
+
+      .footer-bottom {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        min-height: 80px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+
+        color: #888;
+
+        font-size: 13px;
+      }
+
+      /* Social */
+
+      .footer-social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-social a {
+        width: 38px;
+        height: 38px;
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+        text-decoration: none;
+
+        font-size: 13px;
+
+        transition:
+          background 0.3s ease,
+          color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: #fff;
+        color: #111;
+
+        transform: translateY(-4px);
+      }
+
+      @media (max-width: 600px) {
+        .site-footer {
+          padding: 55px 25px 0;
+        }
+
+        .footer-container {
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+
+          padding-bottom: 45px;
+        }
+
+        .footer-brand {
+          grid-column: span 1;
+        }
+
+        .footer-brand h2 {
+          font-size: 35px;
+        }
+
+        .footer-bottom {
+          min-height: auto;
+
+          padding: 25px 0;
+
+          flex-direction: column;
+
+          align-items: flex-start;
+
+          gap: 20px;
+        }
+      }
+      /* ================= REVEAL ================= */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: reveal 0.9s ease forwards;
+      }
+      .delay-1 {
+        animation-delay: 0.12s;
+      }
+      .delay-2 {
+        animation-delay: 0.24s;
+      }
+      .delay-3 {
+        animation-delay: 0.36s;
+      }
+      @keyframes reveal {
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* ================= RESPONSIVE ================= */
+      @media (max-width: 900px) {
+        .about-grid,
+        .content-grid,
+        .service-grid,
+        .split {
+          grid-template-columns: 1fr;
+        }
+        .about-copy {
+          max-width: 680px;
+          margin: auto;
+        }
+        .about-image-wrap {
+          max-width: 500px;
+          margin: auto;
+        }
+        .content-grid {
+          gap: 40px;
+        }
+        .phone {
+          max-width: 240px;
+        }
+        .service-grid {
+          gap: 45px;
+        }
+        .split-image {
+          min-height: 360px;
+        }
+      }
+      @media (max-width: 600px) {
+        .site-header {
+          min-height: 135px;
+        }
+        .brand h1 {
+          font-size: 20px;
+        }
+        .brand small {
+          font-size: 7px;
+        }
+        .about {
+          padding: 55px 0 70px;
+        }
+        .about-grid {
+          gap: 45px;
+        }
+        .about-image {
+          border-radius:  0 0;
+        }
+        .social {
+          right: 13px;
+          bottom: 10px;
+        }
+        .wave-section {
+          padding: 85px 0 80px;
+        }
+        .services {
+          padding: 70px 0;
+        }
+        .services-title {
+          margin-bottom: 35px;
+        }
+        .split-copy {
+          padding: 55px 8vw;
+        }
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <h1>✦ Building a Better Future for All ✦</h1>
+        <small
+          >In the service of the society for more than two decades with an aim
+          to create better world for both old and the young.</small
+        >
+        <div>
+        <div class="breadcrumb"><a href="index.html" style="color: #e5ba69;">Home</a> / About</div>
+      </div>
+      </div>
+      
+      </div>
+      
+    </header>
+   
+
+    <section class="about">
+      <div class="container about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-shape"></div>
+          <img
+            class="about-image"
+            src="image/GG.webp"
+            alt="Creative woman portrait"
+          />
+        </div>
+
+        <div class="about-copy reveal delay-1">
+          <div class="section-kicker"></div>
+          <h2>Legacy of<em>Compassion</em></h2>
+
+          <p>
+            Established in 2001 by visionary entrepreneur-turned-philanthropist
+            Mr. G. Gopalan, Akshaya Trust is a distinguished non-profit
+            organization headquartered in Chennai, Tamil Nadu. With over two
+            decades of service, the Trust has become a beacon of hope,
+            addressing two of society’s most pressing challenges: the care of
+            abandoned senior citizens and the education of underprivileged
+            children.
+          </p>
+
+          <p>
+            Our guiding mission, “Propelling the young. Protecting the old,”
+            reflects an unwavering commitment to nurturing the vulnerable and
+            empowering the next generation.
+          </p>
+
+          <a class="btn" href="#">About me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave-section">
+      <span class="sparkle s1"></span>
+      <span class="sparkle s2"></span>
+      <span class="sparkle s3"></span>
+
+      <div class="container content-grid">
+        <div class="content-block reveal">
+          <div class="section-kicker"></div>
+          <h2>Our Core <em>Endeavours</em></h2>
+
+          <p>
+            Elder Care Homes Dignified living for 400+ destitute seniors across
+            seven free homes, with nutritious meals, preventive medical care,
+            festival celebrations, and complete support for bedridden residents.
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              Akshaya Vidyalaya A free English-medium school for 500+ children,
+              guided by Montessori principles fostering holistic development,
+              creativity, and character formation.
+            </li>
+            <li>
+              Skill Development Programs Tailoring, Montessori training,
+              Silambam martial arts, volleyball, arts, music, and chess
+              empowering rural youth and women with livelihood skills and
+              cultural enrichment.
+            </li>
+            <li>
+              Goshala A sanctuary for 25+ rescued cows, ensuring compassionate
+              care, veterinary support, and eco-friendly initiatives such as
+              biogas generation and organic farming.
+            </li>
+            <li>
+              Community Health & Sustainability Free clinics, ambulance
+              services, solar-powered infrastructure, rainwater harvesting, tree
+              plantations, and eco-conscious operations that embody sustainable
+              living.
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal delay-2">
+          <img
+            class="phone"
+            src="image/csr.webp"
+            alt="Mobile content preview"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="services-title reveal">
+          <div class="section-kicker"></div>
+          <h2>Impact at a<em> Glance</em></h2>
+        </div>
+
+        <div class="service-grid">
+          <div class="testimonial reveal">
+            <ul class="feature-list">
+              <li>400+ seniors given a new lease of life</li>
+              <li>500+ children empowered through free education.</li>
+              <li>120+ individuals employed across operations.</li>
+              <li>8,000+ donors engaged annually.</li>
+              <li>200+ eye donations and 50+ organ pledges</li>
+              <li>7,000+ trees planted with organic farming systems.</li>
+              <li>
+                Solar-powered infrastructure and eco-initiatives across all
+                units.
+              </li>
+            </ul>
+          </div>
+          <div class="service-menu reveal delay-1">
+            <img src="image/impact-1 (1).webp" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="split">
+      <div class="split-image">
+        <div class="service-menu reveal delay-1">
+          <img src="image/gold-seal-give.webp" />
+        </div>
+      </div>
+      <div class="split-copy">
+        <div class="reveal">
+          <div class="section-kicker"></div>
+          <h2>Awards & Recognitions</h2>
+          <ul class="feature-list">
+            <li>Mother Teresa Award for humanitarian service.</li>
+            <li>National Seva Dharmik Award for outstanding social impact.</li>
+            <li>
+              Social Enterprise Award (PMI Chennai) for innovation in service
+              delivery.
+            </li>
+            <li>Be The Change Impact Award by Thuvakkam Foundation.</li>
+            <li>
+              Honors from Rotary, Lions Club, and Sankara Eye Hospital for organ
+              and eye donation initiatives.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="services-title reveal">
+          <div class="section-kicker"></div>
+          <h2></h2>
+        </div>
+        <div class="service-grid">
+          <div class="testimonial reveal">
+            <h2>Vision</h2>
+            <p>
+              To build a caring society where underprivileged senior citizens
+              live with dignity, comfort & happiness, and economically
+              disadvantaged youth are empowered through equal opportunity for
+              education, skill development & growth.
+            </p>
+            <h2>Mission</h2>
+            <p>
+              To provide underprivileged senior citizens a comprehensive,
+              holistic care, including shelter, healthy food, medical support,
+              and a loving community, to ensure their physical and emotional
+              well-being. To empower economically disadvantaged youth by
+              providing quality education and skill development, transforming
+              them into self-reliant citizens who positively impact society. To
+              execute sustainable social projects that can uplift and empower
+              the rural and underserved urban communities.
+            </p>
+          </div>
+
+          <div class="service-menu reveal delay-1">
+            <h2>Values</h2>
+            <ul class="feature-list">
+              <li>Transparency</li>
+              <li>Positive Approach</li>
+              <li>purpose</li>
+              <li>Accountability</li>
+              <li>Humanity & Respect</li>
+              <li>Integrity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave-section">
+      <span class="sparkle s1">✦</span>
+      <span class="sparkle s2">✦</span>
+      <span class="sparkle s3">✧</span>
+
+      <div class="container content-grid">
+        <div class="content-block reveal">
+          <div class="section-kicker"></div>
+          <h2>The Teams & Trustees,<em>Executive Commitee</em></h2>
+          <h3>The Teams</h3>
+          <p>
+            Akshaya’s activities are guided by a group of eminent and committed
+            people with a vast experience in different fields. The committee
+            includes the following personalities
+          </p>
+          <h3>Trustees</h3>
+          <ul class="feature-list">
+            <li>G. Gopalan – Managing Trustee</li>
+            <li>Lalitha Gopalan – Trustee</li>
+          </ul>
+        </div>
+
+        <div class="reveal delay-1">
+          <h2>Executive Commitee</h2>
+          <ul class="feature-list">
+            <li>Sekar Venkteswaran – Entrepreneur, Philanthropist</li>
+            <li>V. Dasarathy – Actor and Dubbing Artist</li>
+            <li>Viswanathan – Project Management Consultant</li>
+            <li>S. Shivkumar – Trustee, Karam Korpom Foundation</li>
+            <li>Dr. Uma Subramanian – Educationist</li>
+            <li>SP Singaram – Managing Trustee, ESSVEE Foundation</li>
+            <li>Senthil – Entrepreneur</li>
+            <li>Narendran – Entrepreneur</li>
+            <li>Veda – Advocate</li>
+            <li>Balaji – Auditor</li>
+            <li>Bhuvana Raman – Cost Accountant and Company Secretary</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+ <section class="wave-section" style="background-color: rgb(234, 210, 218)">
+      <span class="sparkle s1">✦</span>
+      <span class="sparkle s2">✧</span>
+      <span class="sparkle s3">✦</span>
+      <span class="sparkle s4">✧</span>
+      <span class="sparkle s5">✦</span>
+
+      <div class="container content-grid">
+        <div class="content-block reveal">
+          <div class="section-kicker"></div>
+          <h2>Governance <em>Structure</em></h2>
+
+          <div class="" style="font-size: medium; color: #aaa;">
+        <p>Akshaya Trust operates under a multi-tier governance 
+          model ensuring transparency, accountability, and 
+          strategic growth.</p>
+  <div class="container">
+  <div class="row justify-content-start">
+    <div class="col-4" style="background-color: #066621;" >
+      Board of Trustees
+    </div>
+    <div class="col-4" style="background-color: #3926e5;">
+      Manageing trustee
+    </div>
+  </div>
+  <div class="row justify-content-center" >
+    <div class="col-4" style="background-color: #821970;">
+      Finance Commitee
+    </div>
+    <div class="col-5" style="background-color: #644e4a;">
+      Human resource Commitee
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-4" style="background-color: #024205;">
+      Project expansion committee
+    </div>
+    <div class="col-4" style="background-color: #382323;">
+      Education Commitee
+    </div>
+  </div>
+  <div class="row justify-content-strat">
+    <div class="col-4" style="background-color: #111;">
+      outtreach Commitee
+    </div>
+    <div class="col-4" style="background-color: rgb(248, 28, 31);">
+      Audit & compilance committee
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4" style="background-color: #013842;">
+    Elder care Commitee
+    </div>
+    <div class="col-4" style="background-color: rgb(186, 51, 226);">
+      environment Commitee
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-4" style="background-color: rgb(134, 0, 45);">
+      Finance head
+    </div>
+    <div class="col-4" style="background-color: rgb(46, 70, 9);">
+      vice president
+    </div>
+  </div>
+<div class="row justify-content-end">
+    <div class="col-6" style="background-color: rgb(14, 37, 38);">
+     Akshaya Vidyalaya Dean
+    </div>
+    <div class="col-6" style="background-color: rgb(236, 74, 25);">
+      Marketing Managers
+    </div>
+  </div>
+  
+    </div>
+  </div>
+  </div>
+</div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="logo-icon">
+            <img src="image/akshaya-trust-logo-300x300.webp" />
+          </span>
+          <p>
+            Creating a better tomorrow through compassion, care and education.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Our Services -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+
+          <a href="#">Old Age Home</a>
+          <a href="#">Education</a>
+          <a href="#">Patient Care</a>
+          <a href="#">Cow Protection</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column footer-contact">
+          <h4>Contact</h4>
+
+          <p>Coimbatore, Tamil Nadu</p>
+
+          <p>+91 98765 43210</p>
+
+          <p>info@example.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+
+      <div class="footer-bottom">
+        <p>© 2026 Akshaya. All Rights Reserved.</p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">i</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

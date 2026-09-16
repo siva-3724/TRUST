@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #fdfcf6;
+        --yellow: #efd0cc;
+        --gold: #efd0cc;
+        --text: #262522;
+        --muted: #77746e;
+        --line: #e8e5dc;
+        --max: 1180px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--cream);
+        color: var(--text);
+        font-family: "Cormorant Garamond", serif;
+        overflow-x: hidden;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(92%, var(--max));
+        margin: auto;
+      }
+      .breadcrumb{
+  margin-top:13px;
+  color:#e8e5dc;
+  font-size:14px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+      /* ================= HEADER ================= */
+      .site-header {
+        background: #066621;
+        min-height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .brand {
+        color: #fff9f6;
+        text-align: center;
+        letter-spacing: 0.18em;
+      }
+      .brand-mark {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
+        letter-spacing: 0.16em;
+        margin-bottom: 3px;
+      }
+      .brand h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 34px;
+        line-height: 0.9;
+        font-weight: 600;
+      }
+      .brand small {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.32em;
+        margin-top: 9px;
+      }
+      .social {
+        position: absolute;
+        right: 28px;
+        bottom: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social a {
+        width: 22px;
+        height: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 10px;
+        transition: 0.25s;
+      }
+      .social a:hover {
+        background: #fff;
+        color: var(--brown);
+        transform: translateY(-2px);
+      }
+
+      /* ===== INTRO BLOCKS ===== */
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .intro-image {
+        min-height: 360px;
+        overflow: hidden;
+      }
+      .intro-image img {
+        height: 100%;
+        object-fit: cover;
+      }
+      .intro-copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 55px clamp(30px, 6vw, 90px);
+        text-align: center;
+      }
+      .intro-copy h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(28px, 3vw, 42px);
+        line-height: 1;
+        font-weight: 500;
+        margin-bottom: 18px;
+      }
+      .eyebrow {
+        font-size: 7px;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        margin-bottom: 9px;
+      }
+      .intro-copy p {
+        max-width: 450px;
+        margin: 0 auto 14px;
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.85;
+      }
+      .small-btn {
+        display: inline-block;
+        background: #161616;
+        color: white;
+        font-size: 7px;
+        text-transform: uppercase;
+        letter-spacing: 0.17em;
+        padding: 10px 18px;
+        margin-top: 7px;
+        transition: 0.25s;
+      }
+      .small-btn:hover {
+        transform: translateY(-2px);
+        background: var(--gold);
+      }
+
+      /* ===== TESTIMONIAL ===== */
+      .testimonial {
+        background: var(--yellow);
+        padding: 70px 18px 78px;
+        text-align: center;
+        position: relative;
+      }
+      .quote {
+        font-size: 34px;
+        line-height: 0.5;
+        margin-bottom: 19px;
+      }
+      .testimonial p {
+        width: min(630px, 90%);
+        margin: auto;
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: clamp(22px, 2.7vw, 34px);
+        line-height: 1.22;
+      }
+      .testimonial-meta {
+        display: flex;
+        justify-content: center;
+        gap: clamp(35px, 7vw, 100px);
+        margin-top: 36px;
+      }
+      .meta-item {
+        min-width: 100px;
+      }
+      .meta-item strong {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .meta-item span {
+        display: block;
+        margin-top: 4px;
+        font-size: 7px;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+      }
+
+      /* ===== TEAM ===== */
+      .team {
+        padding: 72px 0 78px;
+      }
+      .section-center {
+        text-align: center;
+      }
+      .section-center h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(38px, 4vw, 53px);
+        font-weight: 500;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 38px;
+      }
+      .member img {
+        aspect-ratio: 1/1.2;
+        object-fit: cover;
+        filter: saturate(0.88);
+      }
+      .member-info {
+        text-align: center;
+        padding: 10px 4px;
+      }
+      .member-info h4 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .member-info p {
+        font-size: 7px;
+        color: var(--muted);
+        margin-top: 3px;
+      }
+      /* ===== REVIEWS ===== */
+      .reviews {
+        padding: 46px 0 90px;
+      }
+      .review-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 38px;
+        align-items: center;
+        width: min(930px, 100%);
+        margin: 35px auto 0;
+      }
+      .review-image img {
+        aspect-ratio: 4/5;
+        object-fit: cover;
+      }
+      .review-copy {
+        padding-right: 30px;
+      }
+      .review-copy h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(27px, 3vw, 40px);
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .review-copy p {
+        font-size: 14px;
+        color: black;
+        line-height: 1.8;
+        max-width: 560px;
+        margin-bottom: 15px;
+      }
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .avatar {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .author strong {
+        font-size: 9px;
+      }
+      .author span {
+        display: block;
+        font-size: 7px;
+        color: var(--muted);
+      }
+      /* =========================================
+   FOOTER
+========================================= */
+      footer {
+        padding: 70px 8vw 25px;
+        background: #066621;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 70px;
+      }
+
+      .footer-top p {
+        font-family: var(--serif);
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        border-top: 1px solid #c1bdb5;
+        color: #777;
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      /* =========================
+   FOOTER DESIGN
+========================= */
+
+      .site-footer {
+        width: 100%;
+        background: #066621;
+        color: #fff;
+        padding: 80px 6% 0;
+      }
+
+      /* Main Footer */
+
+      .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns:
+          2fr
+          1fr
+          1fr
+          1.3fr;
+
+        gap: 70px;
+
+        padding-bottom: 65px;
+      }
+
+      /* Brand */
+
+      .footer-brand h2 {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin: 0 0 20px;
+      }
+
+      .footer-brand p {
+        max-width: 330px;
+
+        color: #aaa;
+
+        font-size: 14px;
+        line-height: 1.8;
+
+        margin: 0;
+      }
+
+      /* Footer Columns */
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-column h4 {
+        font-size: 15px;
+        font-weight: 600;
+
+        margin: 0 0 25px;
+
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .footer-column a {
+        position: relative;
+
+        display: inline-block;
+
+        color: #aaa;
+        text-decoration: none;
+
+        font-size: 14px;
+
+        margin-bottom: 13px;
+
+        transition: color 0.3s ease;
+      }
+
+      .footer-column a::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: -3px;
+
+        width: 0;
+        height: 1px;
+
+        background: #fff;
+
+        transition: width 0.3s ease;
+      }
+
+      .footer-column a:hover {
+        color: #fff;
+      }
+
+      .footer-column a:hover::after {
+        width: 100%;
+      }
+
+      /* Contact */
+
+      .footer-contact p {
+        color: #aaa;
+
+        font-size: 14px;
+        line-height: 1.6;
+
+        margin: 0 0 13px;
+      }
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+      .footer-bottom {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        min-height: 80px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+
+        color: #888;
+
+        font-size: 13px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .logo-icon {
+        width: 70px;
+        height: 70px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--black);
+        color: white;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 25px;
+      }
+
+      .logo small {
+        display: block;
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-top: 1px;
+      }
+      /* Social */
+
+      .footer-social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-social a {
+        width: 38px;
+        height: 38px;
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+        text-decoration: none;
+
+        font-size: 13px;
+
+        transition:
+          background 0.3s ease,
+          color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: #fff;
+        color: #111;
+
+        transform: translateY(-4px);
+      }
+
+      @media (max-width: 600px) {
+        .site-footer {
+          padding: 55px 25px 0;
+        }
+
+        .footer-container {
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+
+          padding-bottom: 45px;
+        }
+
+        .footer-brand {
+          grid-column: span 1;
+        }
+
+        .footer-brand h2 {
+          font-size: 35px;
+        }
+
+        .footer-bottom {
+          min-height: auto;
+
+          padding: 25px 0;
+
+          flex-direction: column;
+
+          align-items: flex-start;
+
+          gap: 20px;
+        }
+      }
+
+      /* ===== ANIMATIONS ===== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+        animation: reveal 0.8s ease forwards;
+      }
+      .delay-1 {
+        animation-delay: 0.12s;
+      }
+      .delay-2 {
+        animation-delay: 0.24s;
+      }
+      @keyframes reveal {
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 850px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 650px) {
+        .topbar {
+          height: 32px;
+          font-size: 7px;
+        }
+        .logo h1 {
+          font-size: 35px;
+        }
+        .nav {
+          overflow-x: auto;
+          justify-content: flex-start;
+          white-space: nowrap;
+          gap: 24px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .page-title {
+          padding: 52px 0;
+        }
+        .intro-grid {
+          grid-template-columns: 1fr;
+        }
+        .intro-copy {
+          padding: 45px 25px;
+        }
+        .intro-grid .intro-copy {
+          order: 2;
+        }
+        .intro-grid .intro-image {
+          order: 1;
+        }
+        .intro-grid.reverse .intro-copy {
+          order: 2;
+        }
+        .intro-grid.reverse .intro-image {
+          order: 1;
+        }
+        .intro-image {
+          min-height: 330px;
+        }
+        .testimonial {
+          padding: 58px 12px 64px;
+        }
+        .testimonial-meta {
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+        .team {
+          padding: 55px 0;
+        }
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .review-grid {
+          grid-template-columns: 1fr;
+          width: 90%;
+        }
+        .review-image {
+          max-width: 280px;
+          margin: auto;
+        }
+        .review-copy {
+          padding-right: 0;
+          text-align: center;
+        }
+        .author {
+          justify-content: center;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 400px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <h1>✦ Protecting the Old. Propelling the Young. ✦</h1>
+        <small
+          >While Akshaya’s main objective is to aid the aged, it also nurtures
+          the new generation with education support.</small
+        >
+        <div>
+          <div class="breadcrumb"><a href="index.html" style="color: #be9b4f;">Home</a>/ Activity</div>
+        </div>
+    </header>
+
+    <main>
+      <section class="intro-grid">
+        <div class="intro-image reveal">
+          <img
+            src="image/group-pic.webp"
+            alt="Fashion portrait"
+          />
+        </div>
+
+        <div class="intro-copy reveal delay-1">
+          <div>
+            <div class="eyebrow"></div>
+            <h3>Old Age Homes</h3>
+            <p>
+              Akshaya old age homes are widely regarded as some of the best in
+              the country, and this is largely due to our dedicated staff who
+              work tirelessly to ensure that our residents are given the love
+              and care they deserve. We understand that the senior citizens who
+              come to us are in the most vulnerable phase of their life, and we
+              are committed to making this phase a happy one for them.
+            </p>
+            <p>
+              Our homes provide comfortable shelter, healthy food, and medical
+              care to our residents. In addition to this, we also organize
+              entertainment activities, tours, and visits to temples and places
+              of interest to keep our residents engaged and entertained. Our aim
+              is to create an environment where our residents feel loved, cared
+              for, and happy.
+            </p>
+
+            <p>
+              We owe our success to the excellent support of our donors who have
+              been a constant source of encouragement and motivation. It is
+              their generosity that has enabled us to provide the best possible
+              care to our residents. We are grateful for their support and hope
+              that they continue to partner with us in our mission to provide a
+              new life to abandoned senior citizens.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-grid">
+        <div class="intro-copy reveal">
+          <div>
+            <div class="eyebrow"></div>
+            <h3>Education Support Youth</h3>
+            <p>
+              Akshaya Vidyalaya is a free English medium school that follows the
+              Montessori method of teaching and learning. We believe in
+              nurturing the holistic development of each child, focusing not
+              only on academic excellence but also on their emotional, social,
+              and physical well-being.
+            </p>
+          </div>
+        </div>
+
+        <div class="intro-image reveal delay-1">
+          <img
+            src="image/student-2.webp"
+            alt="Fashion model"
+          />
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <div class="quote"></div>
+        <p>Akshaya Trust Skill Training Programs</p>
+        <p>
+          Akshaya Trust runs multiple free training initiatives to uplift rural
+          children and women, focusing on education, culture, and livelihood
+          skills.
+        </p>
+      </section>
+
+      <section class="team">
+        <div class="container">
+          <div class="section-center">
+            <div class="eyebrow"></div>
+            <h2>Akshaya Trust Skill Training Programs</h2>
+          </div>
+
+          <div class="team-grid">
+            <div class="member reveal">
+              <img src="image/student-2.webp" alt="Ariana Bradford" />
+            </div>
+
+            <div class="member reveal delay-1">
+              <img src="image/student-1 (1).webp" alt="Isabela Harding" />
+            </div>
+
+            <div class="member reveal delay-2">
+              <img src="image/student-4.webp" alt="Zara Gordon" />
+            </div>
+
+            <div class="member reveal delay-3">
+              <img
+                src="image/akshaya-trust-school-donate-2.webp"
+                alt="Isabella Scott"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container" style="background-color: #efd0cc;">
+          <div class="section-center">
+            <div class="eyebrow"></div>
+            <h2>Akshaya Trust Goshala</h2>
+          </div>
+
+          <div class="review-grid">
+            <div class="review-image reveal">
+              <img src="image/students9.webp" alt="Fashion editorial" />
+            </div>
+
+            <div class="review-copy reveal delay-1">
+              <h3>
+                The Akshaya Trust Goshala is a compassionate initiative
+                dedicated to the care and protection of cows.
+              </h3>
+              <p>
+                “ This project reflects the Trust’s commitment to animal welfare
+                and traditional values of compassion. By supporting the Goshala,
+                donors help sustain feeding programs, veterinary care, and
+                shelter facilities that ensure dignity and comfort for these
+                animals. The Goshala also serves as a space for community
+                engagement, encouraging people to participate in seva (service)
+                and learn about sustainable practices in cattle care.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="logo-icon">
+            <img src="image/akshaya-trust-logo-300x300.webp" />
+          </span>
+          <p>
+            Creating a better tomorrow through compassion, care and education.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Our Services -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+
+          <a href="#">Old Age Home</a>
+          <a href="#">Education</a>
+          <a href="#">Patient Care</a>
+          <a href="#">Cow Protection</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column footer-contact">
+          <h4>Contact</h4>
+
+          <p>Coimbatore, Tamil Nadu</p>
+
+          <p>+91 98765 43210</p>
+
+          <p>info@example.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+
+      <div class="footer-bottom">
+        <p>© 2026 Akshaya. All Rights Reserved.</p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">i</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
